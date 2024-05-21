@@ -1,0 +1,127 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/registrations/registration-3/assets/css/registration-3.css">
+  <title>Document</title>
+</head>
+<body>
+  <!doctype html>
+  <html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+  <title>Bootstrap hero header with lead form</title>
+  </head>
+   
+  <body>
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+  body {
+      font-family: 'Roboto', sans-serif;
+  }
+  .btn {
+      padding: 14px 26px;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+  .btn-danger {
+      background-color: #e34c43;
+      border-color: #e34c43;
+  }
+  .banner-image{
+      background: linear-gradient(rgba(29, 38, 113, 0.1), rgba(195, 55, 100, 0.1)), url(img/banner-image-four.jpg);
+      background-size: cover;
+      background-position: center;
+  }
+  .lead-form{
+      background-color:#FFF;
+      max-width:500px;
+      height:auto;
+      margin:0 auto;
+  }
+  ::placeholder {
+  font-size:14px;
+  font-weight:500;
+  }
+  .form-control {
+      border-color: #ebebeb;
+  }
+  .form-control-lg {
+      height: calc(1.6em + 1rem + 2px);
+  }
+  @media(max-width:780px){
+  .display-4{
+  font-size:36px;    
+  }
+  }
+  </style>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light py-3">
+    <div class="container"> <a class="navbar-brand font-weight-bold text-uppercase" href="#">BRANDNAME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto font-weight-bold">
+          <li class="nav-item"> <a class="nav-link" href="#">Accueil</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Apropos</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Portofolio</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
+          {% comment %} <li class="nav-item"> <a class="nav-link" href="#">Testimonials</a> </li> {% endcomment %}
+          <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="banner-image py-5">
+    <div class="container py-1">
+      <div class="row py-1 align-items-center">
+        <div class="col-lg-5 ">
+          <h5 class="display-5 mb-4 font-weight-bold text-center text-lg-left">Faciliter la demande et le suivi de la carte d'identité biométrique en Guinée</h5> 
+            <p class="lead mb-5 text-black-50 text-center text-lg-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc nisi, suscipit id dapibus sit amet, lacinia nec lorem. Aenean eget urna rutrum.</p> 
+            <div class="d-flex justify-content-center justify-content-lg-start mb-4">
+          <a href="" class="btn btn-lg btn-danger mr-2"> View More</a>
+          <a href="" class="btn btn-lg btn-outline-danger"> Contact Us</a>
+          </div>
+                  
+        </div>
+        <div class="col-lg-7 text-center mt-1 mt-lg-0">
+          <div class="lead-form rounded ps-5 pe-5 pb-5 pt-2"> 
+          <form id="contact-form" method="POST" action="">                                  
+                  </h5 class="font-weight-bold mt-2">Formulaire d'inscription</h5>
+                <hr>
+              <div class="row">
+                  <div class="col-12 col-md-12">                                       
+                      <div class="form-group ">
+                        {% csrf_token %}
+                          {{form|crispy}}                                                                                
+                  </div>
+                  <div class="col-12">
+                      <button class="btn btn-danger btn-lg w-100 mt-3 mt-sm-4" type="submit">Valider <i class="lni lni-arrow-right ml-2"></i></button>
+                      <div>
+                          <span class="d-inline-block mt-4 text-black-50 small">By signing up, you accept our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a></span>
+                      </div>
+                  </div>
+              </div>
+          </form>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+  </body>
+  </html>
+</body>
+</html>

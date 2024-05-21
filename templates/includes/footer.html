@@ -1,0 +1,29 @@
+{% load static %}
+</div>
+</div>
+</section>
+<!-- Jquery Core Js --> 
+<script src="{% static 'assets/jquery.js' %}"></script>
+<script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{% static 'assets/bundles/vendorscripts.bundle.js' %}"></script> <!-- Lib Scripts Plugin Js --> 
+
+<script src="{% static 'assets/bundles/jvectormap.bundle.js' %}"></script> <!-- JVectorMap Plugin Js -->
+<script src="{% static 'assets/bundles/morrisscripts.bundle.js' %}"></script><!-- Morris Plugin Js -->
+<script src="{% static 'assets/bundles/sparkline.bundle.js' %}"></script> <!-- Sparkline Plugin Js -->
+<script src="{% static 'assets/bundles/knob.bundle.js' %}"></script> <!-- Jquery Knob Plugin Js -->
+
+<script src="{% static 'assets/bundles/mainscripts.bundle.js' %}"></script>
+<script src="{% static 'assets/js/pages/index.js' %}"></script>
+<script src="{% static 'assets/js/pages/charts/jquery-knob.min.js' %}"></script>
+
+<script>
+    $(document).ready(function(){
+    $('tbody').on('click', '.delete', function () {
+      href = $(this).attr('data-href')
+      $('#form_delete').attr('action', href)
+    })
+  })
+</script>
+
+</body>
+</html>
